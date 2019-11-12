@@ -8,38 +8,42 @@ namespace Sweepstakes
 {
     static class UserInterface
     {
-        //MM
-
+        //MV
+        public static int registrationNumber = 0;
 
         //CTOR
 
 
-        //MV
+        //MM
         public static string GetFirstName()
         {
             Console.WriteLine("What is your first name?");
-            Console.ReadLine();
-            return Console.ReadLine();
+            string firstName = Console.ReadLine();
+            return firstName;
         }
 
         public static string GetLastName()
         {
             Console.WriteLine("What is your last name?");
-            Console.ReadLine();
-            return Console.ReadLine();
+            string lastName = Console.ReadLine();
+            return lastName;
         }
 
         public static string GetEmailAddress()
         {
             Console.WriteLine("What is your email address?");
-            Console.ReadLine();
-            return Console.ReadLine();
+            string emailAddress = Console.ReadLine();
+            return emailAddress;
         }
 
-        //assign registration number???
-        //public static int AssignRegNum()
-        //{
-        //    //logic
-        //}
+        
+        public static int AssignRegNum()
+        {
+            //logic to assign regnum
+            //number starts at 1
+            //next Contestant's regnum is +1 from last number
+            registrationNumber += 1;
+            return registrationNumber;
+        }
     }
 }

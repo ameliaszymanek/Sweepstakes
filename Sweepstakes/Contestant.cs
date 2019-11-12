@@ -19,7 +19,10 @@ namespace Sweepstakes
         //CTOR
         public Contestant()
         {
-            Contestant newContestant = new Contestant();
+            firstName = null;
+            lastName = null;
+            emailAddress = null;
+            registrationNumber = 0;
         }
 
         //MV
@@ -30,7 +33,8 @@ namespace Sweepstakes
             emailAddress = UserInterface.GetEmail;
             registrationNumber = UserInterface.GetRegNumber;
 
-            //NOW CREATE USERINTERFACE STATIC CLASS
+            //figure out how to talk to static class
+            //figure out where to assign a registration number
         }
     }
 }
