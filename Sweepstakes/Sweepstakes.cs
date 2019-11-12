@@ -8,24 +8,32 @@ namespace Sweepstakes
 {
     public class Sweepstakes
     {
-        //MM
-
+        //MV
+        //their registration number is the key and the rest of their information is the value
+        Dictionary<int, Contestant> contestants;
 
         //CTOR
         public Sweepstakes(string name)
         {
-            //???
+            contestants = new Dictionary<int, Contestant>();
         }
 
-        //MV
+        //MM
         public void RegisterContestant(Contestant contestant)
         {
-            //when a new contestant signs up they(and their information) get registered
-            //to register a contestant the contestant obj has to be added to the dictionary
-            //their registration number is the key and the rest of their information is the value
-            Dictionary<int, string > contestants = new Dictionary<int, string>();
-            //whenever a new contestant is created add to the dictionary
-            
+            //add contestant to dictionary
+            contestants.Add(contestant.registrationNumber, contestant);
 
+        }
+
+        private void PrintContactInfo(Contestant contestant)
+        {
+            //
+        }
+
+        private void PickWinner()
+        {
+            //from reference number 1 through the last reference number (how many contestants) choose a random ref num
+        }
     }
 }

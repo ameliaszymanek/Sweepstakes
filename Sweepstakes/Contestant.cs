@@ -19,6 +19,7 @@ namespace Sweepstakes
         //CTOR
         public Contestant()
         {
+            Contestant contestant = new Contestant();
             firstName = null;
             lastName = null;
             emailAddress = null;
