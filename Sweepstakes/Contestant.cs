@@ -28,10 +28,10 @@ namespace Sweepstakes
         //MV
         public void AssignValues()
         {
-            firstName = UserInterface.GetFirstName;
-            lastName = UserInterface.GetLastName;
-            emailAddress = UserInterface.GetEmail;
-            registrationNumber = UserInterface.GetRegNumber;
+            firstName = UserInterface.GetFirstName();
+            lastName = UserInterface.GetLastName();
+            emailAddress = UserInterface.GetEmailAddress();
+            registrationNumber = UserInterface.AssignRegNum();
 
             //figure out how to talk to static class
             //figure out where to assign a registration number
