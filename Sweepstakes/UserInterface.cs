@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    static class UserInterface
+    public static class UserInterface
     {
         //MV
         public static int registrationNumber = 0;
@@ -42,6 +42,8 @@ namespace Sweepstakes
             registrationNumber += 1;
             return registrationNumber;
         }
+
+
 
         
 

@@ -6,20 +6,19 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class Contestant
+    public class Contestant
     {
         //first name, last name, email address, registration number
 
         //MM
-        private string firstName;
-        private string lastName;
-        private string emailAddress;
-        private int registrationNumber;
+        public string firstName;
+        public string lastName;
+        public string emailAddress;
+        public int registrationNumber;
 
         //CTOR
         public Contestant()
         {
-            Contestant contestant = new Contestant();
             firstName = null;
             lastName = null;
             emailAddress = null;
@@ -29,6 +28,7 @@ namespace Sweepstakes
         //MV
         public void AssignValues()
         {
+            
             firstName = UserInterface.GetFirstName();
             lastName = UserInterface.GetLastName();
             emailAddress = UserInterface.GetEmailAddress();
