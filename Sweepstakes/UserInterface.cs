@@ -45,5 +45,10 @@ namespace Sweepstakes
             registrationNumber += 1;
             return registrationNumber;
         }
+
+        public static void PrintWinner(Contestant contestant)
+        {
+            Console.WriteLine($"Winner's First Name: {contestant.firstName} Winner's Last Name: {contestant.lastName} Winner's Email Address: {contestant.emailAddress} Winner's Registration Number: {contestant.registrationNumber}");
+        }
     }
 }
