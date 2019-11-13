@@ -8,10 +8,11 @@ namespace Sweepstakes
 {
     public static class ManagerFactory
     {
-        public static ISweepstakesManager CreateManager(string input)
+        public static ISweepstakesManager CreateManager()
         {
+            string choice = UserInterface.GetManagerType();
             ISweepstakesManager manager = null;
-            switch (input)
+            switch (choice)
             {
                 case "stack":
                     manager = new SweepstakesStackManager();
@@ -21,7 +22,7 @@ namespace Sweepstakes
                     break;
                 default:
                     Console.WriteLine("Not a valid manager type.");
-                    CreateManager(input);
+                    CreateManager();
                     break;
             }
             return manager;
