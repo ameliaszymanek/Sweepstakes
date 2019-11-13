@@ -17,14 +17,13 @@ namespace Sweepstakes
         }
 
         //MM
-        public void CreateSweepstakes(Sweepstakes sweepstakes, Contestant contestant)
+        public void CreateSweepstakes(Sweepstakes sweepstakes, Contestant contestant, ISweepstakesManager manager)
         {
             UserInterface.GetManagerType();
-            //based on what type of manager user chooses a new sweepstakes will be created
-            //call the 2 functions that are in the ISweepstakesManager Interface
-
+            manager.InsertSweepstakes(sweepstakes);
             sweepstakes.RegisterContestant(contestant);
             sweepstakes.PickWinner();
+            manager.GetSweepstakes();
             sweepstakes.PrintContestantInfo(contestant);
         }
 
