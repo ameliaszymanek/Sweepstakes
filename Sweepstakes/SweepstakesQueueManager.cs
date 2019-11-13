@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class SweepstakesStackManager : ISweepstakesManager
+    class SweepstakesQueueManager : ISweepstakesManager
     {
-        //stack implemented using an array or linkedlist
+        //queue implemented using an array or linkedlist
         //MM
+
 
         //CTOR
 
-        //MV
+
+        //MM
         public void GetSweepstakes(Sweepstakes sweepstakes)
         {
             //
