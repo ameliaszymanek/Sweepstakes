@@ -22,9 +22,7 @@ namespace Sweepstakes
         //MM
         public void RegisterContestant(Contestant contestant)
         {
-            //add contestant to dictionary
             contestants.Add(contestant.registrationNumber, contestant);
-
         }
 
         public void PrintContestantInfo(Contestant contestant)
@@ -34,11 +32,9 @@ namespace Sweepstakes
 
         public Contestant PickWinner()
         {
-            //make new variable
             int winner = randomRegistrationNum.Next(1, contestants.Count +1);
             Contestant contestant = contestants[winner];
             return contestant;
-            //from reference number 1 through the last reference number (how many contestants) choose a random ref num
         }
     }
 }

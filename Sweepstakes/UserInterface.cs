@@ -39,9 +39,6 @@ namespace Sweepstakes
         
         public static int AssignRegNum()
         {
-            //logic to assign regnum
-            //number starts at 1
-            //next Contestant's regnum is +1 from last number
             registrationNumber += 1;
             return registrationNumber;
         }
