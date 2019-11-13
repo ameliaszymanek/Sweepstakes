@@ -29,10 +29,7 @@ namespace Sweepstakes
 
         public void PrintContestantInfo(Contestant contestant)
         {
-            {
-                this.contestant = contestant;
                 Console.WriteLine($"Contestant's First Name: {contestant.firstName} Contestant's Last Name: {contestant.lastName} Contestant's Email Address: {contestant.emailAddress} Contestant's Registration Number: {contestant.registrationNumber}");
-            }
         }
 
         public Contestant PickWinner()

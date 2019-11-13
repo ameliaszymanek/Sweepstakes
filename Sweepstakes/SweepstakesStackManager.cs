@@ -17,9 +17,9 @@ namespace Sweepstakes
             stack = new Stack<Sweepstakes>();
         }
         //MV
-        public Sweepstakes GetSweepstakes(Sweepstakes sweepstakes)
+        public Sweepstakes GetSweepstakes()
         {
-            stack.Pop();
+            Sweepstakes sweepstakes = stack.Pop();
             return sweepstakes;
         }
 

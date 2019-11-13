@@ -18,9 +18,9 @@ namespace Sweepstakes
         }
 
         //MM
-        public Sweepstakes GetSweepstakes(Sweepstakes sweepstakes)
+        public Sweepstakes GetSweepstakes()
         {
-            queue.Dequeue();
+            Sweepstakes sweepstakes = queue.Dequeue();
             return sweepstakes;
         }
 
