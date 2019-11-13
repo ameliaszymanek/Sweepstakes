@@ -9,25 +9,18 @@ namespace Sweepstakes
     public class MarketingFirm
     {
         //MV
-        public ISweepstakesManager sweepstakes;
+        public ISweepstakesManager manager;
         //CTOR
-        public MarketingFirm(ISweepstakesManager sweepstakes)
+        public MarketingFirm(ISweepstakesManager manager)
         {
-            this.sweepstakes = sweepstakes;
+            this.manager = manager;
         }
 
         //MM
-        public void CreateSweepstakes(Sweepstakes sweepstakes, Contestant contestant, ISweepstakesManager manager)
+        public void CreateSweepstakes(Sweepstakes sweepstakes, Contestant contestant)
         {
-            UserInterface.GetManagerType();
             manager.InsertSweepstakes(sweepstakes);
-            sweepstakes.RegisterContestant(contestant);
-            sweepstakes.PickWinner();
-            manager.GetSweepstakes();
-            sweepstakes.PrintContestantInfo(contestant);
         }
-
-        
 
        
 
