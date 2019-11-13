@@ -50,5 +50,10 @@ namespace Sweepstakes
         {
             Console.WriteLine($"Winner's First Name: {contestant.firstName} Winner's Last Name: {contestant.lastName} Winner's Email Address: {contestant.emailAddress} Winner's Registration Number: {contestant.registrationNumber}");
         }
+
+        public static void PrintErrorMessage()
+        {
+            Console.WriteLine("Contestant is nonexistent.");
+        }
     }
 }

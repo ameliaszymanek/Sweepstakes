@@ -27,22 +27,20 @@ namespace Sweepstakes
 
         }
 
-        private void PrintContactInfo(Contestant contestant)
+        public void PrintContestantInfo(Contestant contestant)
         {
-            int winner = PickWinner();
-            foreach (KeyValuePair<int, Contestant> reigstrationNumber in contestants)
             {
-                if (contestant.registrationNumber == winner)
-                    Console.WriteLine($"Winner's First Name: {contestant.firstName} Winner's Last Name: {contestant.lastName} Winner's Email Address: {contestant.emailAddress} Winner's Registration Number: {contestant.registrationNumber}");
+                this.contestant = contestant;
+                Console.WriteLine($"Contestant's First Name: {contestant.firstName} Contestant's Last Name: {contestant.lastName} Contestant's Email Address: {contestant.emailAddress} Contestant's Registration Number: {contestant.registrationNumber}");
             }
-            return PrintContactInfo();
         }
 
-        public int PickWinner()
+        public Contestant PickWinner()
         {
             //make new variable
-            int winner = randomRegistrationNum.Next(1, contestants.Count);
-            return winner;
+            int winner = randomRegistrationNum.Next(1, contestants.Count +1);
+            Contestant contestant = contestants[winner];
+            return contestant;
             //from reference number 1 through the last reference number (how many contestants) choose a random ref num
         }
     }
