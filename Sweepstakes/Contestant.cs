@@ -8,8 +8,6 @@ namespace Sweepstakes
 {
     public class Contestant
     {
-        //first name, last name, email address, registration number
-
         //MM
         public string firstName;
         public string lastName;
@@ -28,14 +26,10 @@ namespace Sweepstakes
         //MV
         public void AssignValues()
         {
-            
             firstName = UserInterface.GetFirstName();
             lastName = UserInterface.GetLastName();
             emailAddress = UserInterface.GetEmailAddress();
             registrationNumber = UserInterface.AssignRegNum();
-
-            //figure out how to talk to static class
-            //figure out where to assign a registration number
         }
     }
 }

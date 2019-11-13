@@ -17,7 +17,7 @@ namespace Sweepstakes
         }
 
         //MM
-        public void CreateSweepstakes(Sweepstakes sweepstakes, Contestant contestant)
+        public void CreateSweepstakes(Sweepstakes sweepstakes)
         {
             manager.InsertSweepstakes(sweepstakes);
         }
