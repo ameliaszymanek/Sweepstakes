@@ -15,6 +15,13 @@ namespace Sweepstakes
 
 
         //MM
+        public static string GetManagerType()
+        {
+            Console.WriteLine("What type of data structure would you like to use to manage your sweepstakes? Your choices are 'stack' or 'queue'.");
+            string input = Console.ReadLine();
+            ManagerFactory.CreateManager(input);
+            return input;
+        }
         public static string GetFirstName()
         {
             Console.WriteLine("What is your first name?");
