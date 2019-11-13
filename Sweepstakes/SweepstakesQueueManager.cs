@@ -8,22 +8,25 @@ namespace Sweepstakes
 {
     class SweepstakesQueueManager : ISweepstakesManager
     {
-        //queue implemented using an array or linkedlist
         //MM
-
+        Queue<Sweepstakes> queue;
 
         //CTOR
-
+        public SweepstakesQueueManager()
+        {
+            queue = new Queue<Sweepstakes>();
+        }
 
         //MM
-        public void GetSweepstakes(Sweepstakes sweepstakes)
+        public Sweepstakes GetSweepstakes(Sweepstakes sweepstakes)
         {
-            //
+            queue.Dequeue();
+            return sweepstakes;
         }
 
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-            //
+            queue.Enqueue(sweepstakes);
         }
     }
 }

@@ -8,20 +8,24 @@ namespace Sweepstakes
 {
     class SweepstakesStackManager : ISweepstakesManager
     {
-        //stack implemented using an array or linkedlist
         //MM
+        Stack<Sweepstakes> stack;
 
         //CTOR
-
-        //MV
-        public void GetSweepstakes(Sweepstakes sweepstakes)
+        public SweepstakesStackManager()
         {
-            //
+            stack = new Stack<Sweepstakes>();
+        }
+        //MV
+        public Sweepstakes GetSweepstakes(Sweepstakes sweepstakes)
+        {
+            stack.Pop();
+            return sweepstakes;
         }
 
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-            //
+            stack.Push(sweepstakes);
         }
     }
 }
